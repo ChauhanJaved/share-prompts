@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const isUserLoggedIn = true;
+  const isUserLoggedIn = false;
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -83,7 +83,7 @@ const Nav = () => {
               />
             {toggleDropdown && (
                <div className='dropdown'>
-                                <Link
+                <Link
                   href='/profile'
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
